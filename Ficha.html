@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #300050;
+    }
+    h1 {
+      margin-top: 20px;
+      margin-left: 100px;
+      color: #ffffff;
+    }
+    button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+    }
+    .input1 {
+      width: 50px;
+      height: 35px;
+      font-size: 20px;
+      margin-left: 100px;
+      margin-top: 25px;
+      text-align: center;
+    }
+    .input2{
+        width: 170;
+        font-size: 20px;
+        height: 30px;
+        margin-bottom: 60px;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+    .bonus {
+      color: #ffffff;
+      margin-left: 10px;
+      font-size: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 200px;
+    }
+    .p1 {
+      color: #ffffff;
+      margin-left: 100px;
+      margin-bottom: -15px;
+      margin-top: 3px;
+    }
+    .pericias{
+      color: #ffffff;
+      font-size: 13px;
+    }
+    .PericBonus{
+      line-break: anywhere;
+      color: #ffffff;
+      font-size: 13px;
+      line-height: 28px;
+    }
+    .RadPeric{
+      margin-bottom: 11.8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ficha</h1>
+<form>
+  <label style="margin-left: 100px; color: #ffffff; font-size: 20px;">
+    Nome:
+    <input id="Name" class="input2" type="text">
+    Rank:
+    <select id="Rank" class="input2">
+      <option>Sleeper</option>
+      <option>Awakned</option>
+      <option>Ascended</option>
+      <option>Transcended</option>
+      <option>S</option>
+      <option></option>
+      <option></option>
+    </select>
+    Classe:
+    <select id="Classe" class="input2">
+      <option>Dormant</option>
+      <option>Awakned</option>
+      <option>Master</option>
+      <option>Transcended</option>
+      <option>S</option>
+      <option></option>
+      <option></option>
+    </select>
+    Teste:
+    <input id="Teste" class="input2" type="text">
+  </label>
+</form>
+
+<div class="pericias" style="position: absolute; top: 180px; left: 260px;">
+  <p>F</p>
+  <p>D</p>
+  <p>S</p>
+  <p>P</p>
+  <p>A</p>
+  <p>F</p>
+  <p>B</p>
+  <p>S</p>
+</div>
+
+<input type="number" id="CoreBonus" value="0" oninput="AgainAgain();" style="position: absolute; top: 145px; left: 238px; width: 30px; height: 25px;">
+
+<p style="position: absolute; top: 131px; left: 162px;" class="bonus">Cores:</p>
+
+<div style="position: absolute; top: 191px; left: 235px;">
+ <input type="checkbox" class="RadPeric" id="RadialA" oninput="DoAgain('A')"> <br>
+ <input type="checkbox" class="RadPeric" id="RadialB" oninput="DoAgain('B')"> <br>
+ <input type="checkbox" class="RadPeric" id="RadialC" oninput="DoAgain('C')"> <br>
+ <input type="checkbox" class="RadPeric" id="RadialD" oninput="DoAgain('D')"> <br>
+ <input type="checkbox" class="RadPeric" id="RadialE" oninput="DoAgain('E')"> <br>
+ <input type="checkbox" class="RadPeric" id="RadialF" oninput="DoAgain('F')"> <br>
+ <input type="checkbox" class="RadPeric" id="RadialG" oninput="DoAgain('G')"> <br>
+ <input type="checkbox" class="RadPeric" id="RadialH" oninput="DoAgain('H')"> <br> 
+</div>
+
+<div style="position: absolute; top: 187px; left: 360px;">
+<span class="PericBonus" id="BonusA">+0</span> <br>
+<span class="PericBonus" id="BonusB">+0</span> <br>
+<span class="PericBonus" id="BonusC">+0</span> <br>
+<span class="PericBonus" id="BonusD">+0</span> <br>
+<span class="PericBonus" id="BonusE">+0</span> <br>
+<span class="PericBonus" id="BonusF">+0</span> <br>
+<span class="PericBonus" id="BonusG">+0</span> <br>
+<span class="PericBonus" id="BonusH">+0</span> <br>
+</div>
+
+<!-- ComboBoxes -->
+<div style="position: absolute; top: 190px; left: 385px;"> 
+<select style="margin-bottom: 9px;" id="SelecA" oninput="AgainAgain()">
+  <option value="1">t</option>
+  <option value="2">s</option>
+  <option value="3">m</option>
+</select>
+<br>
+<select style="margin-bottom: 9px;" id="SelecB" oninput="AgainAgain()">
+  <option value="1">t</option>
+  <option value="2">s</option>
+  <option value="3">m</option>
+</select>
+<br>
+<select style="margin-bottom: 9px;" id="SelecC" oninput="AgainAgain()">
+  <option value="1">t</option>
+  <option value="2">s</option>
+  <option value="3">m</option>
+</select>
+<br>
+<select style="margin-bottom: 9px;" id="SelecD" oninput="AgainAgain()">
+  <option value="1">t</option>
+  <option value="2">s</option>
+  <option value="3">m</option>
+</select>
+<br>
+<select style="margin-bottom: 9px;" id="SelecE" oninput="AgainAgain()">
+  <option value="1">t</option>
+  <option value="2">s</option>
+  <option value="3">m</option>
+</select>
+<br>
+<select style="margin-bottom: 9px;" id="SelecF" oninput="AgainAgain()">
+  <option value="1">t</option>
+  <option value="2">s</option>
+  <option value="3">m</option>
+</select>
+<br>
+<select style="margin-bottom: 9px;" id="SelecG" oninput="AgainAgain()">
+  <option value="1">t</option>
+  <option value="2">s</option>
+  <option value="3">m</option>
+</select>
+<br>
+<select style="margin-bottom: 9px;" id="SelecH" oninput="AgainAgain()">
+  <option value="1">t</option>
+  <option value="2">s</option>
+  <option value="3">m</option>
+</select>
+</div>
+<!-- ComboBoxes -->
+
+
+  <div>
+    <input id="Body" class="input1" type="number" value="10" oninput="updateBonus('Body'); AgainAgain();">
+    <span class="bonus" id="bonusBody">+0</span>
+    <p class="p1">Body</p>
+  </div>
+  
+  <div>
+    <input id="Mind" class="input1" type="number" value="10" oninput="updateBonus('Mind'); AgainAgain();">
+    <span class="bonus" id="bonusMind">+0</span>
+    <p class="p1">Mind</p>
+
+  </div>
+  <div>
+    <input id="Soul" class="input1" type="number" value="10" oninput="updateBonus('Soul'); AgainAgain();">
+    <span class="bonus" id="bonusSoul">+0</span>
+    <p class="p1">Soul</p>
+  </div>
+
+  <script>
+    function calculateBonus(value) {
+        // Converte o valor para número e aplica os bônus
+        const numericValue = parseInt(value, 10);
+      if (isNaN(numericValue)) return 0;
+      if (numericValue >= 0 && numericValue < 2) return -5;
+      if (numericValue >= 2 && numericValue < 4) return -4;
+      if (numericValue >= 4 && numericValue < 6) return -3;
+      if (numericValue >= 6 && numericValue < 8) return -2;
+      if (numericValue >= 8 && numericValue < 10) return -1;
+      if (numericValue >= 10 && numericValue < 12) return 0;
+      if (numericValue >= 12 && numericValue < 14) return 1;
+      if (numericValue >= 14 && numericValue < 16) return 2;
+      if (numericValue >= 16 && numericValue < 18) return 3;
+      if (numericValue >= 18 && numericValue < 20) return 4;
+      if (numericValue >= 20) return 5;
+      return 0;
+    }
+
+    function updateBonus(attributeId) {
+      const input = document.getElementById(attributeId);
+      const bonusLabel = document.getElementById(`bonus${attributeId}`);
+      const bonus = calculateBonus(input.value);
+      if (bonus >= 0)
+      bonusLabel.textContent = `+${bonus}`;
+      else
+      bonusLabel.textContent = `${bonus}`;
+    }
+
+    function DoAgain(Target){
+      const value = document.getElementById(`Bonus${Target}`);
+      const bonusB = document.getElementById(`bonusBody`);
+      const bonusM = document.getElementById(`bonusMind`);
+      const bonusA = document.getElementById(`bonusSoul`);
+      const CoreB = document.getElementById(`CoreBonus`);
+      const CkBox = document.getElementById(`Radial${Target}`);
+      const Mult = document.getElementById(`Selec${Target}`);
+      var result = 0;
+      
+      if(Target == 'A' || Target == 'B' || Target == 'C'){
+        if(CkBox.checked){ result = parseInt(bonusB.textContent) + (parseInt(CoreB.value) * parseInt(Mult.value)); }
+        else { result = parseInt(bonusB.textContent) }
+      }
+      if(Target == 'D' || Target == 'E' || Target == 'F'){
+        if(CkBox.checked){ result = parseInt(bonusM.textContent) + (parseInt(CoreB.value) * parseInt(Mult.value)); }
+        else { result = parseInt(bonusM.textContent) }
+      }
+      if(Target == 'G' || Target == 'H'){
+        if(CkBox.checked){ result = parseInt(bonusA.textContent) + (parseInt(CoreB.value) * parseInt(Mult.value)); }
+        else { result = parseInt(bonusA.textContent) }
+      }      
+      if (result >= 0){ value.textContent = `+${result}`;}
+      else{ value.textContent = result;}
+    }
+
+    function AgainAgain(){
+      DoAgain('A');
+      DoAgain('B');
+      DoAgain('C');
+      DoAgain('D');
+      DoAgain('E');
+      DoAgain('F');
+      DoAgain('G');
+      DoAgain('H');
+    }
+  </script>
+</body>
+</html>
+
+
+<!-- If armor is less than half of raw damage, health lost = damage - armor. But if armor is more than half of the damage, health lost = (Damage/(Armor*4))*Damage. 
+Remake health lost = (Damage/(Armor*2,5))*Damage 
+-->
